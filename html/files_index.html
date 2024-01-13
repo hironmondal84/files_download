@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../files_style.css">
+    <title>Files</title>
+</head>
+<body>
+<h3 class="bg-primary p-2 text-white border border-danger">Log Files</h3><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sl No.</th>
+        <th scope="col">File Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody id="files"> 
+    </tbody>
+</table>
+<span id="h_files" hidden><%=files%></span>  
+  <script>
+   document.getElementById("files").innerHTML=document.getElementById("h_files").innerText;
+  </script>
+</body>
+</html>
