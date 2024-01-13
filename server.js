@@ -9,11 +9,11 @@ app.get("/files", (req, res) => {
   const testFolder = './html/files/';
   const fs = require('fs');
   fs.readdir(testFolder, (err, files) => {
-    var datum='';
+    var html_data='';
     for (var i = 0; i < files.length; i++){
-    datum=datum+'<tr><td>'+(i+1)+'</td><td>'+files[i]+'</td><td><a class="btn btn-outline-info" href="'+files[i]+'" download>Download</a></td></tr>'
+      html_data=html_data+'<tr><td>'+(i+1)+'</td><td>'+files[i]+'</td><td><a class="btn btn-outline-info" href="'+files[i]+'" download>Download</a></td></tr>'
     }
-    res.render(__dirname + "/html/files_index.html",{files:datum});
+    res.render(__dirname + "/html/files_index.html",{files:html_data});
   });
 });
 
